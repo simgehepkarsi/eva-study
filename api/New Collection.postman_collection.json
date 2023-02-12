@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "a1878a85-cfdd-4364-a764-88d5a4994a3b",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "logs",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/transactionlogs/createlog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"traderId\" : 2,\r\n\"shareCode\" : \"ABC\",\r\n\"shareAmount\" :10 ,\r\n\"sharePrice\" : 1,\r\n\"tradeSide\" : \"SELL\",\r\n\"status\" : \"OK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transactionlogs/createlog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactionlogs",
+								"createlog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/transactionlogs/getlogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/transactionlogs/getlogs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactionlogs",
+								"getlogs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "share",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/share/getShare",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/share/initDatabase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/share/initDatabase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"share",
+								"initDatabase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/share/createShare",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"traderId\" : 2,\r\n\"name\" : \"asas\",\r\n\"code\" :\"abc\",\r\n\"registeredAmount\" : 100,\r\n\"price\" : 12,\r\n\"tradeSide\" : \"buy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/share/createShare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"share",
+								"createShare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/share/updatePriceRegisteredShare",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\" : 1,\r\n\"traderId\" : 1,\r\n\"code\" :\"ABC\",\r\n\"newPrice\" : 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/share/updatePriceRegisteredShare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"share",
+								"updatePriceRegisteredShare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/share/registerShare",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"traderId\" : 1,\r\n\"name\" : \"XYZ\",\r\n\"code\" :\"XYZ\",\r\n\"registeredAmount\" : 5,\r\n\"price\" : 10,\r\n\"tradeSide\" : \"SELL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/share/registerShare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"share",
+								"registerShare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/share/buyShare",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"shareId\" : 2,\r\n\"shareCode\" : \"XYZ\",\r\n\"buyAmount\" :4,\r\n\"buyerTraderId\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/share/buyShare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"share",
+								"buyShare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/share/sellShare",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"shareId\" : 1,\r\n\"shareCode\" : \"ABC\",\r\n\"sellAmount\" :2,\r\n\"sellerTraderId\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/share/sellShare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"share",
+								"sellShare"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trader",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/trader/createtrader",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"veli\",\r\n\"email\" : \"veli@veli.com\",\r\n\"password\" :\"12345\" ,\r\n\"balance\" : 1000,\r\n\"blockedBalance\" : 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/trader/createtrader",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"trader",
+								"createtrader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/trader/gettraders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/trader/gettraders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"trader",
+								"gettraders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tradersportfolios",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/tradersportfolios/gettradersportfolios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/tradersportfolios/gettradersportfolios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tradersportfolios",
+								"gettradersportfolios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/tradersportfolios/createtradersportfolios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"traderId\" : 1,\r\n\"shareName\" : \"XYZ\",\r\n\"shareCode\" :\"XYZ\" ,\r\n\"shareAmount\" : 10,\r\n\"shareBlockedAmount\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/tradersportfolios/createtradersportfolios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tradersportfolios",
+								"createtradersportfolios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
